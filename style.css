@@ -1,0 +1,65 @@
+<!-- CSS 样式 -->
+<style>
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    color: #333;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 50%;
+  }
+
+  .left-arrow {
+    left: -50px; /* 相对于产品图的位置，往左移动一点 */
+  }
+
+  .right-arrow {
+    right: -50px; /* 往右移 */
+  }
+
+  .carousel-arrow:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .product-wrapper {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+    top: 55%; /* 根据你的图微调位置 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 15px;
+  }
+
+  .product-wrapper:hover .hover-overlay {
+    opacity: 1;
+  }
+
+  .product-img {
+    max-height: 250px;
+    border-radius: 10px;
+    z-index: 3;
+    margin: 0 15px;
+  }
+</style>
