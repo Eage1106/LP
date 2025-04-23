@@ -1,65 +1,131 @@
-<!-- CSS 样式 -->
-<style>
-  .carousel-arrow {
-    position: absolute;
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.store-banner-wrapper {
+  position: absolute;
+  top: 65%;               /* 根据图片空白微调 */
+  left: 76%;              /* 根据图片空白微调 */
+  transform: translate(-50%, -50%);
+  width: clamp(200px, 40vw, 450px); /* 自动适配 */
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .store-banner-wrapper {
+    top: 48%;
+    left: 74%;
+    width: clamp(50px, 80vw, 180px);
+  }
+}
+
+
+.position-relative {
+  background-size: cover;
+  background-position: center top;
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .position-relative {
+    min-height: 40vh;
+  }
+}
+
+
+.store-ad-wrapper {
+  position: absolute;
+  top: 65%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: clamp(200px, 40vw, 450px);
+  z-index: 2;
+}
+
+.store-ad-wrapper img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .store-ad-wrapper {
     top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    color: #333;
-    font-size: 30px;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 3;
-    border-radius: 50%;
-  }
-
-  .left-arrow {
-    left: -50px; /* 相对于产品图的位置，往左移动一点 */
-  }
-
-  .right-arrow {
-    right: -50px; /* 往右移 */
-  }
-
-  .carousel-arrow:hover {
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  .product-wrapper {
-    position: absolute;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 15px;
-    top: 55%; /* 根据你的图微调位置 */
-    left: 50%;
+    left: 74%;
     transform: translate(-50%, -50%);
+    width: clamp(180px, 70vw, 180px);
   }
+}
 
-  .hover-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s;
-    border-radius: 15px;
-  }
+.product-carousel-wrapper {
+  position: absolute;
+  top: 48%;
+  left: 24%;
+  transform: translate(-50%, -50%);
+  width: clamp(200px, 60vw, 360px);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
 
-  .product-wrapper:hover .hover-overlay {
-    opacity: 1;
+/* 💡 移动端位置微调 */
+@media (max-width: 768px) {
+  .product-carousel-wrapper {
+    top: 50%;
+    left: 26%;
+    width: clamp(150px, 80vw, 150px);
   }
+}
 
-  .product-img {
-    max-height: 250px;
-    border-radius: 10px;
-    z-index: 3;
-    margin: 0 15px;
-  }
-</style>
+/* 🧱 轮播容器 */
+.product-carousel {
+  width: 100%;
+  position: relative;
+}
+
+/* 🖼️ 图片大小随视口缩放，保持比例 */
+.product-image-responsive {
+  width: 100%;
+  height: auto;
+  max-height: clamp(200px, 30vh, 400px);
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ⬅️➡️ 箭头按钮响应式大小 + 动效 */
+.carousel-arrow {
+  position: absolute;
+  top: 50%; /* 垂直居中 */
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.85);
+  border: none;
+  font-size: clamp(16px, 2vw, 24px);
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 3;
+  transition: background 0.2s;
+}
+
+.left-arrow {
+  left: -10px;;
+}
+
+.right-arrow {
+  right: -10px;
+}
