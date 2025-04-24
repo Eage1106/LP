@@ -10,10 +10,10 @@
   <body>
     
 
-    <img src="1.png">
-    <img src="2.png">
-    <img src="3.png" >   
-    <img src="4.png">
+    <img src="1.png" class="img-fluid w-100">
+    <img src="2.png" class="img-fluid w-100">
+    <img src="3.png"  class="img-fluid w-100">    
+    <img src="4.png" class="img-fluid w-100">
     <div class="position-relative">
       <img src="5.png" class="img-fluid w-100">
       
@@ -38,20 +38,19 @@
   
       <div class="product-carousel-wrapper position-absolute">
         <div class="product-carousel">
-          <div class="carousel-inner position-relative text-center">
-      
-            <div class="carousel-item-content">
+          <div class="carousel-inner text-center position-relative">
+            <div class="carousel-item-content position-relative d-inline-block">
               <a id="product-link" href="#" target="_blank">
-                <img id="product-image" src="product1.avif" class="img-fluid product-image-responsive">
+                <img id="product-image" src="product1.avif" class="img-fluid product-image-responsive" alt="商品画像" />
               </a>
               <div id="product-price" class="mt-2 fw-bold text-dark">¥72,545 ～ ¥87,090 (税別)</div>
+          
+              <!-- ✅ 将按钮也放进来 -->
+              <button id="prev-btn" class="carousel-arrow left-arrow">←</button>
+              <button id="next-btn" class="carousel-arrow right-arrow">→</button>
             </div>
-      
-            <button id="prev-btn" class="carousel-arrow left-arrow">&#8592;</button>
-            <button id="next-btn" class="carousel-arrow right-arrow">&#8594;</button>
-      
           </div>
-        </div>
+          
       </div>
       
     </div>

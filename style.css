@@ -13,7 +13,7 @@ img {
   top: 65%;               /* 根据图片空白微调 */
   left: 76%;              /* 根据图片空白微调 */
   transform: translate(-50%, -50%);
-  width: clamp(200px, 40vw, 450px); /* 自动适配 */
+  width: clamp(200px, 40vw, 650px); /* 自动适配 */
   z-index: 2;
 }
 
@@ -43,9 +43,9 @@ img {
 .store-ad-wrapper {
   position: absolute;
   top: 65%;
-  left: 70%;
+  left: 75%;
   transform: translate(-50%, -50%);
-  width: clamp(200px, 40vw, 450px);
+  width: clamp(200px, 40vw, 650px);
   z-index: 2;
 }
 
@@ -69,7 +69,7 @@ img {
   top: 48%;
   left: 24%;
   transform: translate(-50%, -50%);
-  width: clamp(200px, 60vw, 360px);
+  width: clamp(200px, 60vw, 650px);
   z-index: 2;
   transition: all 0.3s ease;
 }
@@ -123,9 +123,9 @@ img {
 }
 
 .left-arrow {
-  left: -10px;;
+  left: -30px;
 }
 
 .right-arrow {
-  right: -10px;
+  right: -30px;
 }
